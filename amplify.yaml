@@ -12,11 +12,14 @@ applications:
       phases:
         build:
           commands:
-              -  npm run build
+            - cd apps/admin-dashboard  # Ensure correct directory
+            - npm install
+            - npm run build
       artifacts:
-        baseDirectory: apps/admin-dashboard/dist
+        baseDirectory: apps/admin-dashboard/dist  # Ensure this is correct
         files:
           - '**/*'
       cache:
-        paths: []
-    appRoot: packages/my-shared-backend
+        paths:
+          - node_modules/
+    appRoot: apps/admin-dashboard  # Ensure this points to the correct frontend root
