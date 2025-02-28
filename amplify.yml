@@ -11,7 +11,7 @@ applications:
       phases:
         build:
           commands: 
-            - cd ../
+            - ls -la
             - cd ../../apps/admin-dashboard
             - npm run build
       artifacts:
