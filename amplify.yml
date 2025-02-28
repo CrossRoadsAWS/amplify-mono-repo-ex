@@ -11,7 +11,8 @@ applications:
       phases:
         build:
           commands: 
-            - cd apps/admin-dashboard
+            - cd ../
+            - cd ../../apps/admin-dashboard
             - npm run build
       artifacts:
         baseDirectory: apps/admin-dashboard/dist
